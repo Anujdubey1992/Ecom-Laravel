@@ -18,6 +18,10 @@
     {{View::make('footer')}}
 </body>
 <style>
+.details-img
+{
+    height: 200px;
+}
 .custome-login{
     height: 500px;
     padding-top: 100px;
