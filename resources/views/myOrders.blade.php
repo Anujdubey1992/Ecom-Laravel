@@ -4,9 +4,9 @@
   
   <div class="col-sm-10">
       <div class="trending-wrapper">
-            <h3>Result For Products</h3>
-            <a href="ordernow" class="btn btn-success">ordernow</a><br><br>
-            @foreach ($products as $item)
+            <h3>My Orders</h3>
+            
+            @foreach ($orders as $item)
                 <div class="row searched-item cart-list-devider">
                 <div class="col-sm-4">
                 <a href="details/{{$item->id}}">
@@ -15,19 +15,21 @@
                 </div>
                 <div class="col-sm-4">
                    <div class="">
-                    <h2>{{$item->name}}</h2>
-                    <h3>{{$item->description}}</h3>
+                    <h2><b>Name:</b> {{$item->name}}</h2>
+                    <h5><b>Delivery Status:</b> {{$item->status}}</h5>
+                    <h5><b>Address:</b> {{$item->address}}</h5>
+                    <h5><b>Payment Method:</b> {{$item->payment_method}}</h5>
+                    <h5><b>Payment Status:</b> {{$item->payment_status}}</h5>
+                    <h5><b>Date:</b>{{$item->created_at}}</h5>
                     </div>
                 </div>
 
-                  <div class="col-sm-4">
-                      <a href="/removecart/{{$item->cart_id}}" class="btn btn-warning">Remove to cart</a>
-                    </div>
+                  
 
                 </div>
             @endforeach
                  </div>
-                 <a href="ordernow" class="btn btn-success">ordernow</a><br><br>
+                 
       </div>
   </div>
 </div>
